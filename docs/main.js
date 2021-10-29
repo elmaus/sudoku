@@ -487,7 +487,7 @@ colorBtn.addEventListener('click', () => {
         if(toggleColor){
             for(let i=0; i<9; i++){
                 boxChildren[i].textContent = i+1;
-                boxChildren[i].style.background = 'white';
+                boxChildren[i].style.background = 'none';
             }
             toggleColor = false;
             colorBtn.style.color = normalBtnColor;
