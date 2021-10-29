@@ -70,7 +70,7 @@
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(9, 1fr);
     border:solid black 3px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     background-color: white;
 }
 
