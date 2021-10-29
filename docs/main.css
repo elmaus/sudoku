@@ -83,7 +83,7 @@
     place-items: center;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    font-size: .7em;
+    font-size: .8em;
     /* background-color: rgb(42, 161, 252); */
 }
 
@@ -294,7 +294,7 @@
 }
 
 .title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-top: 100px;
 }
 
