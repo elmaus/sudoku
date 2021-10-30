@@ -320,14 +320,15 @@ for(let i=0; i<9; i++){
 
         target.cell.addEventListener('click', () => {
             if(!pause){
-                resetBacground(); 
                 if(target.background == selectedColor){ 
+                    resetBacground();
                     target.cell.style.background = "white"; 
                     target.background = "white"; 
                     selectedX = i;
                     selectedY = j;
                 }
-                else {
+                else { 
+                    resetBacground();
                     target.cell.style.background = selectedColor;
                     target.background = selectedColor;
                     highlightGroup(i, j);
