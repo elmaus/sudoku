@@ -333,7 +333,7 @@
 
 .win-title { 
     font-size:2.5rem;
-    margin:auto;
+    margin:25px auto;
 } 
 
 #win-btn { 
@@ -341,5 +341,6 @@
     width:8em; 
     height:3em;
     font-size:1rem; 
-    border-radius:50px;
+    border-radius:50px; 
+    margin-bottom:25px;
 }
