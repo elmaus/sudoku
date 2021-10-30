@@ -490,7 +490,8 @@ document.getElementById('clear').addEventListener('click', () => {
             const children = target.cell.childNodes;
             children.forEach(element => {
                 element.textContent = '';
-            })
+            });
+            check();
             addNodes(selectedX, selectedY);
         }
     }
@@ -605,9 +606,9 @@ gamePad.addEventListener('click', () => {
 
 gameMenuExitBtn.addEventListener('click', () => {
     if(!finished){
-        resume();
         pause = false;
     }
+    resume();
     gameMenu.style.display = 'none';
 })
 document.addEventListener('resize', () => {
@@ -624,9 +625,9 @@ restartBtn.addEventListener('click', () => {
 
 back.addEventListener('click', () => {
     if(!finished){
-        resume();
         pause = false;
     }
+    resume();
     gameMenu.style.display = 'none';
 })
 
@@ -637,17 +638,17 @@ newGame.addEventListener('click', () => {
 
 document.getElementById('diff-exit-btn').addEventListener('click', () => {
     if(!finished){
-        resume();
         pause = false;
-    }
+    } 
+    resume();
     diffBox.style.display = 'none';
 })
 
 document.getElementById('diff-back').addEventListener('click', () => { 
     if(!finished){
-        resume();
         pause = false;
     }
+    resume();
     diffBox.style.display = 'none'; 
 })
 
