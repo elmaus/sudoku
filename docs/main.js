@@ -589,7 +589,8 @@ gamePad.addEventListener('click', () => {
 
 gameMenuExitBtn.addEventListener('click', () => {
     resume();
-    gameMenu.style.display = 'none';
+    gameMenu.style.display = 'none'; 
+    pause = false;
 })
 document.addEventListener('resize', () => {
     choiceBox.style.height = boxChildren[0].clientWidth;
