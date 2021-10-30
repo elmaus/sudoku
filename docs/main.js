@@ -326,6 +326,8 @@ for(let i=0; i<9; i++){
                     target.background = "white"; 
                     selectedX = i;
                     selectedY = j;
+                    let previous = currentNode.parent; 
+                    currentNode = previous;
                 }
                 else { 
                     resetBacground();
@@ -335,8 +337,8 @@ for(let i=0; i<9; i++){
                     highlightSame(i,j);
                     selectedX = i;
                     selectedY = j;
+                    addNodes(i, j);
                 }
-                //addNodes(i, j);
             }
         });
 
