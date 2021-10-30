@@ -161,7 +161,7 @@
     flex-direction:row;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: -20px;
+    /*margin-top: -20px;*/
     color:rgb(71, 71, 126);
 }
 
