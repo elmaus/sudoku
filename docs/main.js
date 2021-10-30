@@ -16,7 +16,7 @@ const newGame = document.getElementById('new-game');
 const diffBox = document.getElementById('diff-box');
 const level = document.getElementById('level'); 
 const win = document.getElementById('win'); 
-winBtn = document.getElementById('win-btn');
+const winBtn = document.getElementById('win-btn');
 // const choiceColorBox = document.querySelector(".choice-color-box");
 
 let mainbw = mainBox.clientWidth; 
