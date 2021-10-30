@@ -18,7 +18,7 @@ const level = document.getElementById('level');
 // const choiceColorBox = document.querySelector(".choice-color-box");
 
 let mainbw = mainBox.clientWidth; 
-mainBox.style.width = mainbw; 
+mainBox.style.width = mainbw - (3 * 9); 
 
 
 let toggleColor = false;
