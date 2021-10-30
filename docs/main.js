@@ -414,12 +414,26 @@ for(let i=0; i<9; i++){
                     if(target.cell.style.border.split(' ')[2] == colorSelections[i]){
                         target.cell.style.border = "solid 1px grey";
                         target.border = "solid 1px grey";
-                        createSubGrid();
-                        addNodes(selectedX, selectedY);
+                        createSubGrid(); 
+                        if(currentNode != null){ 
+                            if(currentNode.border != target.border){ 
+                                addNodes(selectedX, selectedY);
+                            }
+                        }
+                        else {
+                            addNodes(selectedX, selectedY);
+                        }
                     }else {
                         target.cell.style.border = `solid 3px ${colorSelections[i]}`;
-                        target.border = `solid 3px ${colorSelections[i]}`;
-                        addNodes(selectedX, selectedY);
+                        target.border = `solid 3px ${colorSelections[i]}`; 
+                        if(currentNode != null){
+                            if(currentNode.border != target.border){ 
+                                addNodes(selectedX, selectedY);
+                            }
+                        }
+                        else {
+                            addNodes(selectedX, selectedY);
+                        }
                     }
 
                 }
