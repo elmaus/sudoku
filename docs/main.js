@@ -483,7 +483,7 @@ document.getElementById('clear').addEventListener('click', () => {
 
 const boxChildren = choiceBox.children;
 const colorSelections = ['red', 'violet', 'blue', 'aqua', 'green', 'lime', 'yellow', 'orange',  'grey'];
-choiceBox.style.height = boxChildren[0].clientWidth;
+choiceBox.style.height = boxChildren[0].clientWidth + 2;
 
 colorBtn.addEventListener('click', () => {
     if(!pause){
