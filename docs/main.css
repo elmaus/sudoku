@@ -64,7 +64,8 @@
 .main-box {
     position:relative;
     width: 100%;
-    min-width:300px;
+    min-width:300px; 
+    min-height:300px;
     display:grid;
     gap:0; 
     grid-row-gap:0; 
