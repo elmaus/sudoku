@@ -333,7 +333,7 @@ for(let i=0; i<9; i++){
                     selectedX = i;
                     selectedY = j;
                 }
-                //addNodes(i, j);
+                addNodes(i, j);
             }
         });
 
