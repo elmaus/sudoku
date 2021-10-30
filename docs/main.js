@@ -323,7 +323,9 @@ for(let i=0; i<9; i++){
                 resetBacground(); 
                 if(target.background == selectedColor){ 
                     target.cell.style.background = "white"; 
-                    target.background = "white";
+                    target.background = "white"; 
+                    selectedX = i;
+                    selectedY = j;
                 }
                 else {
                     target.cell.style.background = selectedColor;
