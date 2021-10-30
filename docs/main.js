@@ -14,7 +14,9 @@ const restartBtn = document.getElementById('restart');
 const back = document.getElementById('back');
 const newGame = document.getElementById('new-game');
 const diffBox = document.getElementById('diff-box');
-const level = document.getElementById('level');
+const level = document.getElementById('level'); 
+const win = document.getElementById('win'); 
+winBtn = document.getElementById('win-btn');
 // const choiceColorBox = document.querySelector(".choice-color-box");
 
 let mainbw = mainBox.clientWidth; 
@@ -341,7 +343,9 @@ for(let i=0; i<9; i++){
                         }
                         check();
                         if(checkIfFinished()){
-                            alert('Finished');
+                            win.style.display = 'grid';
+                            pause = true; 
+                            clearInterval(startTime);
                         }
                     }else{
                         target.display.textContent = '';
@@ -646,4 +650,8 @@ level.addEventListener('click', () => {
     pauseGame()
     pause = true;
     clearInterval(startTime);
-})
+}) 
+
+winBtn.addEventListener('click', () => {
+    win.style.display = 'none';
+}
