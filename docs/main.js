@@ -599,33 +599,39 @@ document.addEventListener('resize', () => {
 restartBtn.addEventListener('click', () => {
     restart();
     gameMenu.style.display = 'none';
-    startTime = setInterval(timer, 1000);
+    startTime = setInterval(timer, 1000); 
+    pause = false;
 })
 
 back.addEventListener('click', () => {
     resume();
-    gameMenu.style.display = 'none';
+    gameMenu.style.display = 'none'; 
+    pause = false;
 })
 
 newGame.addEventListener('click', () => {
     gameMenu.style.display = 'none';
-    diffBox.style.display = 'grid';
+    diffBox.style.display = 'grid'; 
+    pause = false;
 })
 
 document.getElementById('diff-exit-btn').addEventListener('click', () => {
     resume();
-    diffBox.style.display = 'none';
+    diffBox.style.display = 'none'; 
+    pause = false;
 })
 
 document.getElementById('diff-back').addEventListener('click', () => {
     resume();
-    diffBox.style.display = 'none';
+    diffBox.style.display = 'none'; 
+    pause = false;
 })
 
 const difBtns = document.getElementsByClassName('diff-btn');
 
 for(let i=0; i<5; i++){
-    difBtns[i].addEventListener('click', () => {
+    difBtns[i].addEventListener('click', () => { 
+        pause = false;
         difficulty = difficulties[i].grade;
         level.textContent = difficulties[i].level;
         restart();
