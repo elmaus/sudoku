@@ -593,7 +593,7 @@ gameMenuExitBtn.addEventListener('click', () => {
     pause = false;
 })
 document.addEventListener('resize', () => {
-    choiceBox.style.height = boxChildren[0].clientWidth;
+    choiceBox.style.height = boxChildren[0].clientWidth + 2;
 })
 
 restartBtn.addEventListener('click', () => {
