@@ -604,9 +604,11 @@ gamePad.addEventListener('click', () => {
 })
 
 gameMenuExitBtn.addEventListener('click', () => {
-    resume();
-    gameMenu.style.display = 'none'; 
-    pause = false;
+    if(!finished){
+        resume();
+        pause = false;
+    }
+    gameMenu.style.display = 'none';
 })
 document.addEventListener('resize', () => {
     choiceBox.style.height = boxChildren[0].clientWidth + 2;
@@ -621,27 +623,32 @@ restartBtn.addEventListener('click', () => {
 })
 
 back.addEventListener('click', () => {
-    resume();
-    gameMenu.style.display = 'none'; 
-    pause = false;
+    if(!finished){
+        resume();
+        pause = false;
+    }
+    gameMenu.style.display = 'none';
 })
 
 newGame.addEventListener('click', () => {
     gameMenu.style.display = 'none';
     diffBox.style.display = 'grid'; 
-    pause = false;
 })
 
 document.getElementById('diff-exit-btn').addEventListener('click', () => {
-    resume();
-    diffBox.style.display = 'none'; 
-    pause = false;
+    if(!finished){
+        resume();
+        pause = false;
+    }
+    diffBox.style.display = 'none';
 })
 
-document.getElementById('diff-back').addEventListener('click', () => {
-    resume();
+document.getElementById('diff-back').addEventListener('click', () => { 
+    if(!finished){
+        resume();
+        pause = false;
+    }
     diffBox.style.display = 'none'; 
-    pause = false;
 })
 
 const difBtns = document.getElementsByClassName('diff-btn');
