@@ -337,7 +337,8 @@ for(let i=0; i<9; i++){
                         }else{ 
                             resetBacground();
                             target.number = i + 1;
-                            target.display.textContent = i + 1;
+                            target.display.textContent = i + 1; 
+                            highlightGroup(selectedX, selectedY);
                             highlightSame(selectedX, selectedY);
                             addNodes(selectedX, selectedY);
                         }
@@ -426,7 +427,7 @@ function checkIfFinished(){
     for(let i = 0; i<9; i++){
         for(let j=0; j<9; j++){
             if(!listBox[i][j].locked){
-                if(!isValid(i, j, listBox[i][j].number)){
+                if(!isValid(i, j, listBox[i][j].number) || listBox[i][j].number == 0){
                     return false;
                 }
             }
