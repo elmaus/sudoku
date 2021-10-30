@@ -654,4 +654,4 @@ level.addEventListener('click', () => {
 
 winBtn.addEventListener('click', () => {
     win.style.display = 'none';
-}
+})
