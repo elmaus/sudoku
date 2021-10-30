@@ -335,6 +335,9 @@ for(let i=0; i<9; i++){
                     highlightSame(i,j);
                     selectedX = i;
                     selectedY = j;
+                } 
+                if(currentNode.x != i && currentNode.y != j){ 
+                    addNodes(i, j);
                 }
             }
         });
@@ -357,8 +360,10 @@ for(let i=0; i<9; i++){
                                 target.display.textContent = ' ';
                                 resetBacground();
                                 highlightGroup(selectedX, selectedY);
-                                target.cell.style.background = selectedColor;
-                                addNodes(selectedX, selectedY);
+                                target.cell.style.background = selectedColor; 
+                                if(currentNode.number != target.number){
+                                    addNodes(selectedX, selectedY);
+                                }
                             }else{ 
                                 resetBacground();
                                 target.number = i + 1;
@@ -366,8 +371,10 @@ for(let i=0; i<9; i++){
                                 target.cell.style.background = selectedColor; 
                                 target.background = selectedColor;
                                 highlightGroup(selectedX, selectedY);
-                                highlightSame(selectedX, selectedY);
-                                addNodes(selectedX, selectedY);
+                                highlightSame(selectedX, selectedY); 
+                                if(currentNode.number != target.number){ 
+                                    addNodes(selectedX, selectedY);
+                                }
                             }
                             check();
                             if(checkIfFinished()){ 
