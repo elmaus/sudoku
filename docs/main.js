@@ -307,8 +307,8 @@ let highlightNumbers = num => {
                 listBox[i][j].cell.style.background = "grey";
             }
             else {
-                listBox[i][j].background = "grey";
-                listBox[i][j].cell.style.background = "grey";
+                listBox[i][j].background = "white";
+                listBox[i][j].cell.style.background = "white";
             }
         }
     }
@@ -348,8 +348,9 @@ for(let i=0; i<9; i++){
     document.getElementById(`${i+1}`).addEventListener('click', () => {
         if(!pause){
 
-            let target = listBox[selectedX][selectedY]; 
+             
             if(selectedX && selectedY){ 
+                let target = listBox[selectedX][selectedY];
                 if(!toggleColor){
                     if(!target.locked){
                         if(!noteMode){
