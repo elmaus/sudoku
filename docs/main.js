@@ -333,7 +333,7 @@ for(let i=0; i<9; i++){
                             target.cell.style.background = selectedColor;
                             addNodes(selectedX, selectedY);
                         }else{ 
-                            resetBackground();
+                            resetBacground();
                             target.number = i + 1;
                             target.display.textContent = i + 1;
                             highlightSame(selectedX, selectedY);
