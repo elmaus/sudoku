@@ -541,21 +541,20 @@ const resume = () => {
             }
             listBox[i][j].cell.style.background = listBox[i][j].background;
             listBox[i][j].cell.style.border = listBox[i][j].border;
-        // console.log(listBox[i][j].border);
-
         }
     }
     createSubGrid();
-    startTime = setInterval(timer, 1000);
-
+    if(!finished){
+        startTime = setInterval(timer, 1000);
+    }
 }
 
 playBtn.addEventListener('click', () => {
     mainMenu.style.display = "none";
     startTime = setInterval(timer, 1000);
-})
+});
 
-// resume();
+
 
 const pauseGame = () => {
     for(let i=0; i<9; i++){
