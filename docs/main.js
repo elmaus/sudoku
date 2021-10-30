@@ -299,7 +299,7 @@ function highlightSame(x, y){
     }
 }
 
-let highlightNumbers = (num) => { 
+let highlightNumbers = num => { 
     for(let i=0; i<9; i++){
         for(let j=0; j<9; j++){ 
             if(listBox[i][j].number == num){ 
@@ -320,15 +320,20 @@ for(let i=0; i<9; i++){
 
         target.cell.addEventListener('click', () => {
             if(!pause){
-                resetBacground();
-                target.cell.style.background = selectedColor;
-                target.background = selectedColor;
-                highlightGroup(i, j);
-                highlightSame(i,j);
-                selectedX = i;
-                selectedY = j;
-
-                addNodes(i, j);
+                resetBacground(); 
+                if(target.background == selectedColor){ 
+                    target.cell.style.background = "white"; 
+                    target.background = "white";
+                }
+                else {
+                    target.cell.style.background = selectedColor;
+                    target.background = selectedColor;
+                    highlightGroup(i, j);
+                    highlightSame(i,j);
+                    selectedX = i;
+                    selectedY = j;
+                }
+                //addNodes(i, j);
             }
         });
 
