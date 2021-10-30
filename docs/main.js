@@ -299,7 +299,7 @@ function highlightSame(x, y){
     }
 }
 
-let highlightNumbers(num){ 
+let highlightNumbers = (num) => { 
     for(let i=0; i<9; i++{
         for(let j=0; j<9; j++){ 
             if(listBox[i][j].number == num){ 
