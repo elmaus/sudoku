@@ -299,6 +299,20 @@ function highlightSame(x, y){
     }
 }
 
+let highlightNumbers(num){ 
+    for(let i=0; i<9; i++{
+        for(let j=0; j<9; j++){ 
+            if(listBox[i][j].number == num){ 
+                listBox[i][j].background = "grey";
+                listBox[i][j].cell.style.background = "grey";
+            }
+            else {
+                listBox[i][j].background = "grey";
+                listBox[i][j].cell.style.background = "grey";
+            }
+        }
+    }
+}
 
 for(let i=0; i<9; i++){
     for(let j=0; j<9; j++){
@@ -322,7 +336,10 @@ for(let i=0; i<9; i++){
     document.getElementById(`${i+1}`).addEventListener('click', () => {
         if(!pause){
 
-            let target = listBox[selectedX][selectedY];
+            let target = listBox[selectedX][selectedY]; 
+            if(!target){ 
+                
+            }
             if(!toggleColor){
                 if(!target.locked){
                     if(!noteMode){
