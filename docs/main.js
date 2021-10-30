@@ -20,6 +20,7 @@ const level = document.getElementById('level');
 let mainbw = mainBox.clientWidth; 
 mainBox.style.width = mainbw + "px"; 
 
+
 let toggleColor = false;
 
 let difficulties = [
@@ -482,7 +483,7 @@ document.getElementById('clear').addEventListener('click', () => {
 
 const boxChildren = choiceBox.children;
 const colorSelections = ['red', 'violet', 'blue', 'aqua', 'green', 'lime', 'yellow', 'orange',  'grey'];
-choiceBox.style.height = boxChildren[0].clientWidth;
+choiceBox.style.height = boxChildren[0].clientWidth + "px";
 
 colorBtn.addEventListener('click', () => {
     if(!pause){
