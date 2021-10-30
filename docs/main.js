@@ -88,8 +88,9 @@ function doCurrentNode(){
     // target.notes = currentNode.notes;
 
     highlightGroup(currentNode.x, currentNode.y);
-    highlightSame(currentNode.x, currentNode.y);
-    target.cell.style.background = currentNode.background;
+    highlightSame(currentNode.x, currentNode.y); 
+    highlightNumbers(currentNode.number);
+    target.cell.style.background = selectedColor;
 
     target.cell.style.border = currentNode.border;
     createSubGrid();
