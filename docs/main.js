@@ -337,7 +337,12 @@ for(let i=0; i<9; i++){
                     selectedX = i;
                     selectedY = j;
                 } 
-                if(currentNode.x != i && currentNode.y != j){ 
+                if(currentNode != null){
+                    if(currentNode.x != i && currentNode.y != j){ 
+                        addNodes(i, j);
+                    }
+                }
+                else {
                     addNodes(i, j);
                 }
             }
