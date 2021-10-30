@@ -22,7 +22,7 @@ const winBtn = document.getElementById('win-btn');
 let mainbw = mainBox.clientWidth; 
 mainBox.style.width = mainbw - (5 * 9); 
 
-
+let finished = false; 
 let toggleColor = false;
 
 let difficulties = [
@@ -441,13 +441,17 @@ function checkIfFinished(){
 }
 
 document.getElementById('undo').addEventListener('click', () => {
-    if(!pause){
-        undo();
+    if(!finished){   
+        if(!pause){
+            undo();
+        }
     }
 });
 document.getElementById('redo').addEventListener('click', () => {
-    if(!pause){
-        redo();
+    if(!finished){ 
+        if(!pause){
+            redo();
+        }
     }
 })
 
@@ -568,17 +572,19 @@ const pauseGame = () => {
 
 
 document.getElementById('pause').addEventListener('click', () => {
-    if(pause){
-        resume();
-        pause = false;
-        pauseBox.style.display = "none";
+    if(!finished){
+        if(pause){
+            resume();
+            pause = false;
+            pauseBox.style.display = "none";
 
 
-    }else {
-        pauseGame()
-        pause = true;
-        pauseBox.style.display = "grid";
-        console.log(gameMenu.style.display);
+        }else {
+            pauseGame()
+            pause = true;
+            pauseBox.style.display = "grid";
+            console.log(gameMenu.style.display);
+        } 
     }
 })
 
