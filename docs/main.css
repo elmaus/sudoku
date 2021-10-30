@@ -11,7 +11,7 @@
 .app {
     position:relative;
     max-width: 500px;
-    /* height: 100vh;*/
+    height: 100vh;
     margin:auto;
     /* font-family: 'Comic Sans MS', 'Comic Sans'; */
     background-image: linear-gradient(rgb(167, 247, 247), rgb(120, 247, 247));
@@ -19,10 +19,11 @@
 
 .game {
     /* position: absolute; */
-    display:grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-gap:1em;
+    display:flex; 
+    flex-direction: column;
+    /*grid-template-columns: auto;*/
+    /*grid-template-rows: auto;*/
+    /*grid-gap:1em;*/
     margin:auto;
     padding:1rem .5rem;
     width:100%; 
