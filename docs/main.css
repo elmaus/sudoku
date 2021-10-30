@@ -88,8 +88,8 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     font-size: .8em; 
-    row-gap:-3;
-    column-gap:-3;
+    row-gap:-5;
+    column-gap:-5;
     /* background-color: rgb(42, 161, 252); */
 }
 
