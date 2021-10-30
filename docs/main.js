@@ -324,8 +324,12 @@ for(let i=0; i<9; i++){
                     resetBacground();
                     target.cell.style.background = "white"; 
                     target.background = "white";
+                    selectedX = null;
+                    selectedY = null;
                     let previous = currentNode.parent; 
-                    currentNode = previous;
+                    if(target.number == 0){
+                        currentNode = previous;
+                    }
                 }
                 else { 
                     resetBacground();
@@ -345,68 +349,70 @@ for(let i=0; i<9; i++){
         if(!pause){
 
             let target = listBox[selectedX][selectedY]; 
-            if(!target){ 
-                highlightNumbers(i+1);
-            }
-            if(!toggleColor){
-                if(!target.locked){
-                    if(!noteMode){
-                        const children = target.cell.childNodes;
-                        children.forEach(element => {element.textContent = ''
-                        });
-                        if(target.number == (i + 1)){
-                            target.number = 0;
-                            target.display.textContent = ' ';
-                            resetBacground();
-                            highlightGroup(selectedX, selectedY);
-                            target.cell.style.background = selectedColor;
-                            addNodes(selectedX, selectedY);
-                        }else{ 
-                            resetBacground();
-                            target.number = i + 1;
-                            target.display.textContent = i + 1; 
-                            target.cell.style.background = selectedColor; 
-                            target.background = selectedColor;
-                            highlightGroup(selectedX, selectedY);
-                            highlightSame(selectedX, selectedY);
-                            addNodes(selectedX, selectedY);
-                        }
-                        check();
-                        if(checkIfFinished()){ 
-                            finished = true; 
-                            resetBacground();
-                            win.style.display = 'grid';
-                            pause = true; 
-                            clearInterval(startTime);
-                        }
-                    }else{
-                        target.display.textContent = '';
-                        target.number = 0;
-                        const children = target.cell.childNodes;
-                        if(children[i].textContent == i + 1){
-                            children[i].textContent = '';
-                            target.notes[i] = '';
-                            addNodes(selectedX, selectedY);
+            if(selectedX && selectedY){ 
+                if(!toggleColor){
+                    if(!target.locked){
+                        if(!noteMode){
+                            const children = target.cell.childNodes;
+                            children.forEach(element => {element.textContent = ''
+                            });
+                            if(target.number == (i + 1)){
+                                target.number = 0;
+                                target.display.textContent = ' ';
+                                resetBacground();
+                                highlightGroup(selectedX, selectedY);
+                                target.cell.style.background = selectedColor;
+                                addNodes(selectedX, selectedY);
+                            }else{ 
+                                resetBacground();
+                                target.number = i + 1;
+                                target.display.textContent = i + 1; 
+                                target.cell.style.background = selectedColor; 
+                                target.background = selectedColor;
+                                highlightGroup(selectedX, selectedY);
+                                highlightSame(selectedX, selectedY);
+                                addNodes(selectedX, selectedY);
+                            }
+                            check();
+                            if(checkIfFinished()){ 
+                                finished = true; 
+                                resetBacground();
+                                win.style.display = 'grid';
+                                pause = true; 
+                                clearInterval(startTime);
+                            }
                         }else{
-                            children[i].textContent = i + 1;
-                            target.notes[i] = i + 1
-                            addNodes(selectedX, selectedY);
+                            target.display.textContent = '';
+                            target.number = 0;
+                            const children = target.cell.childNodes;
+                            if(children[i].textContent == i + 1){
+                                children[i].textContent = '';
+                                target.notes[i] = '';
+                                addNodes(selectedX, selectedY);
+                            }else{
+                                children[i].textContent = i + 1;
+                                target.notes[i] = i + 1
+                                addNodes(selectedX, selectedY);
+                            }
                         }
                     }
                 }
-            }
-            else {
-                if(target.cell.style.border.split(' ')[2] == colorSelections[i]){
-                    target.cell.style.border = "solid 1px grey";
-                    target.border = "solid 1px grey";
-                    createSubGrid();
-                    addNodes(selectedX, selectedY);
-                }else {
-                    target.cell.style.border = `solid 3px ${colorSelections[i]}`;
-                    target.border = `solid 3px ${colorSelections[i]}`;
-                    addNodes(selectedX, selectedY);
-                }
+                else {
+                    if(target.cell.style.border.split(' ')[2] == colorSelections[i]){
+                        target.cell.style.border = "solid 1px grey";
+                        target.border = "solid 1px grey";
+                        createSubGrid();
+                        addNodes(selectedX, selectedY);
+                    }else {
+                        target.cell.style.border = `solid 3px ${colorSelections[i]}`;
+                        target.border = `solid 3px ${colorSelections[i]}`;
+                        addNodes(selectedX, selectedY);
+                    }
 
+                }
+            }
+            else { 
+                 highlightNumbers(i+1);
             }
         }
     })
