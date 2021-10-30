@@ -348,7 +348,8 @@ for(let i=0; i<9; i++){
                         }
                         check();
                         if(checkIfFinished()){ 
-                            finished = true;
+                            finished = true; 
+                            resetBacground();
                             win.style.display = 'grid';
                             pause = true; 
                             clearInterval(startTime);
