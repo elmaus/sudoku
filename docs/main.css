@@ -11,7 +11,7 @@
 .app {
     position:relative;
     max-width: 500px;
-    height: 100vh;
+    /* height: 100vh;*/
     margin:auto;
     /* font-family: 'Comic Sans MS', 'Comic Sans'; */
     background-image: linear-gradient(rgb(167, 247, 247), rgb(120, 247, 247));
