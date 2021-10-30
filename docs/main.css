@@ -100,6 +100,7 @@
     align-items: center;
     font-size: .8em;
     padding:0;
+    margin:-5;
 }
 
 .num {
