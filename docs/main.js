@@ -338,7 +338,7 @@ for(let i=0; i<9; i++){
 
             let target = listBox[selectedX][selectedY]; 
             if(!target){ 
-                
+                highlightNumbers(i+1);
             }
             if(!toggleColor){
                 if(!target.locked){
