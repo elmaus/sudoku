@@ -361,7 +361,12 @@ for(let i=0; i<9; i++){
                                 resetBacground();
                                 highlightGroup(selectedX, selectedY);
                                 target.cell.style.background = selectedColor; 
-                                if(currentNode.number != target.number){
+                                if(currentNode != null){
+                                    if(currentNode.number != target.number){
+                                        addNodes(selectedX, selectedY);
+                                    }
+                                }
+                                else {
                                     addNodes(selectedX, selectedY);
                                 }
                             }else{ 
@@ -372,7 +377,12 @@ for(let i=0; i<9; i++){
                                 target.background = selectedColor;
                                 highlightGroup(selectedX, selectedY);
                                 highlightSame(selectedX, selectedY); 
-                                if(currentNode.number != target.number){ 
+                                if(currentNode != null){
+                                    if(currentNode.number != target.number){ 
+                                        addNodes(selectedX, selectedY);
+                                    }
+                                }
+                                else {
                                     addNodes(selectedX, selectedY);
                                 }
                             }
