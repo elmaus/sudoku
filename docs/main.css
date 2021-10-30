@@ -123,13 +123,11 @@
     display:grid;
     grid-template-columns: repeat(9, 1fr);
     column-gap: 5px;
-    /* place-items: center; */
     max-width: 500px;
     min-width: 300px;
     font-size: 2rem;
-    margin:1.5rem 0 .5rem 0;
+    margin:25px 0 .5rem 0;
     padding:0 1rem;
-    /* height: 60px; */
 }
 
 .choice-item {
