@@ -20,8 +20,8 @@
 .game {
     /* position: absolute; */
     display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto auto auto;
+    grid-template-columns: minmax(300px, 500px);
+    grid-template-rows: auto minmax(300px, 500px) auto auto auto;
     grid-gap:1em;
     margin:auto;
     padding:1rem .5rem;
