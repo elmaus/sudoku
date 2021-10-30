@@ -45,8 +45,8 @@ let createGrid = () => {
             bx = new Box(cell, num);
             listBox[i].push(bx);
 
-            cell.style.width = box_width + "px";
-            cell.style.height = box_width + "px";
+            cell.style.width = box_width;
+            cell.style.height = box_width;
 
             
         }
