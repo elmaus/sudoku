@@ -244,7 +244,7 @@ const restart = () => {
 
 
             listBox[i][j].cell.style.background = 'white';
-            // listBox[i][j].cell.style.border = 'solid 1px grey';
+            listBox[i][j].display.style.color = 'black';
         }
     }
     generateSudocu()
