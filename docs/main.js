@@ -105,7 +105,8 @@ function undo(){
     if(currentNode.parent != null){
         let par = currentNode.parent;
         currentNode = par;
-        doCurrentNode();
+        doCurrentNode(); 
+        check();
     }
 }
 function redo() {
@@ -113,6 +114,7 @@ function redo() {
         let chi = currentNode.child
         currentNode = chi;
         doCurrentNode();
+        check();
     }
 }
 
