@@ -349,7 +349,7 @@ for(let i=0; i<9; i++){
         if(!pause){
 
              
-            if(selectedX && selectedY){ 
+            if(selectedX != null && selectedY != null){ 
                 let target = listBox[selectedX][selectedY];
                 if(!toggleColor){
                     if(!target.locked){
