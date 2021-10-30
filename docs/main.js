@@ -303,7 +303,7 @@ function highlightSame(x, y){
 let highlightNumbers = num => { 
     for(let i=0; i<9; i++){
         for(let j=0; j<9; j++){ 
-            if(listBox[i][j].number == num){ 
+            if(listBox[i][j].number == num && num != 0){ 
                 listBox[i][j].background = "grey";
                 listBox[i][j].cell.style.background = "grey";
             }
