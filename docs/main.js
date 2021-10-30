@@ -347,7 +347,8 @@ for(let i=0; i<9; i++){
                             addNodes(selectedX, selectedY);
                         }
                         check();
-                        if(checkIfFinished()){
+                        if(checkIfFinished()){ 
+                            finished = true;
                             win.style.display = 'grid';
                             pause = true; 
                             clearInterval(startTime);
@@ -615,7 +616,8 @@ restartBtn.addEventListener('click', () => {
     restart();
     gameMenu.style.display = 'none';
     startTime = setInterval(timer, 1000); 
-    pause = false;
+    pause = false; 
+    finished = false;
 })
 
 back.addEventListener('click', () => {
@@ -646,6 +648,7 @@ const difBtns = document.getElementsByClassName('diff-btn');
 
 for(let i=0; i<5; i++){
     difBtns[i].addEventListener('click', () => { 
+        finished = false;
         pause = false;
         difficulty = difficulties[i].grade;
         level.textContent = difficulties[i].level;
